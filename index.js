@@ -12,7 +12,6 @@ app.command('/dsb-calc', async ({ command, ack, respond }) => {
     const comm = command.text;
     console.log(command);
     await ack();
-    // const latency = Date.now() - start;
     await respond({ text: `${eval(comm)}` });
 });
 
